@@ -13,6 +13,7 @@ const router = express.Router();
 
 // all routes that are related to books only
 router.get('/books', authenticate, paginationMiddleware, getAllBooks);
+// router.get('/books', paginationMiddleware, getAllBooks);
 router.get('/books/:id', authenticate, getSingleBook);
 router.post('/books', authenticate, addNewBook);
 router.put('/books/:id', authenticate, updateBook);
